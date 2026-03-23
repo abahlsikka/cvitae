@@ -22,7 +22,6 @@
             line-height: 1.7;
         }
 
-        /* Estructura Suiza: Asimétrica y Limpia */
         header {
             height: 70vh;
             display: flex;
@@ -57,7 +56,7 @@
             display: grid;
             grid-template-columns: 1fr 2fr;
             gap: 40px;
-            margin-bottom: 120px;
+            margin-bottom: 100px;
         }
 
         .section-title {
@@ -66,18 +65,46 @@
             letter-spacing: 2px;
             font-weight: 700;
             color: var(--light);
+            border-left: 3px solid var(--accent);
+            padding-left: 15px;
+            height: fit-content;
         }
 
         .content h3 {
             font-size: 1.8rem;
-            margin-bottom: 10px;
+            margin-bottom: 5px;
             font-family: 'Playfair Display', serif;
         }
 
-        .item { margin-bottom: 50px; }
-        .date { font-size: 0.75rem; color: var(--accent); font-weight: 700; margin-bottom: 10px; display: block; }
+        .content h4 {
+            font-size: 1rem;
+            color: var(--accent);
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
 
-        /* Tabla de Requisitos */
+        .item { margin-bottom: 60px; }
+        .date { font-size: 0.75rem; color: var(--light); font-weight: 700; margin-bottom: 5px; display: block; }
+
+        .description-list {
+            list-style: none;
+            margin-top: 15px;
+        }
+
+        .description-list li {
+            margin-bottom: 8px;
+            padding-left: 20px;
+            position: relative;
+        }
+
+        .description-list li::before {
+            content: "→";
+            position: absolute;
+            left: 0;
+            color: var(--accent);
+        }
+
         .stats {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -90,7 +117,6 @@
         .stat-box span { font-size: 0.7rem; text-transform: uppercase; color: var(--light); display: block; }
         .stat-box b { font-size: 1.1rem; }
 
-        /* Footer */
         footer {
             padding: 100px 10%;
             background: #f9f9f9;
@@ -102,18 +128,22 @@
             text-decoration: none;
             color: var(--primary);
             border-bottom: 4px solid var(--accent);
+            transition: 0.3s;
         }
+
+        .contact-link:hover { color: var(--accent); }
 
         @media (max-width: 800px) {
             section { grid-template-columns: 1fr; }
             header h1 { font-size: 3.5rem; }
+            .stats { grid-template-columns: 1fr; }
         }
     </style>
 </head>
 <body>
 
 <header>
-    <p class="subtitle">Flight Instructor & Candidate</p>
+    <p class="subtitle">Flight Instructor & Cabin Crew Candidate</p>
     <h1>Aarón<br>Bahl Sikka</h1>
 </header>
 
@@ -122,47 +152,77 @@
     <section>
         <div class="section-title">Profil</div>
         <div class="content">
-            <p style="font-size: 1.4rem; margin-bottom: 30px; font-weight: 300;">
-                Als Fluglehrer bei <b>Canavia</b> kombiniere ich technisches Fachwissen mit absoluter Serviceorientierung.
+            <p style="font-size: 1.3rem; margin-bottom: 30px; font-weight: 300;">
+                Als Fluglehrer bei <b>Canavia</b> verfüge ich über fundierte Kenntnisse in der Luftfahrt und ein hohes Maß an Verantwortungsbewusstsein. Ich bin es gewohnt, in einem professionellen Umfeld zu arbeiten, Sicherheitsrelevante Verfahren (SOPs) einzuhalten und Passagieren ein sicheres Gefühl zu geben.
             </p>
             <div class="stats">
                 <div class="stat-box"><span>Körpergröße</span><b>> 1.60 m ✅</b></div>
-                <div class="stat-box"><span>Pass</span><b>EU / Unbegrenzt ✅</b></div>
-                <div class="stat-box"><span>Schwimmfähig</span><b>Ja ✅</b></div>
+                <div class="stat-box"><span>Pass</span><b>EU Reisepass ✅</b></div>
+                <div class="stat-box"><span>Schwimmfähig</span><b>Nachgewiesen ✅</b></div>
                 <div class="stat-box"><span>Sehstärke</span><b>+/- 5 dpt ✅</b></div>
             </div>
         </div>
     </section>
 
     <section>
-        <div class="section-title">Erfahrung</div>
+        <div class="section-title">Berufserfahrung</div>
         <div class="content">
             <div class="item">
-                <span class="date">September 2025 — HEUTE</span>
-                <h3>FLuglehrer (FI)</h3>
-                <p style="color: var(--light); margin-bottom: 10px;">Canavia Aviation Academy</p>
-                <p>Verantwortlich für die Ausbildung zukünftiger Piloten unter Einhaltung strengster Sicherheitsstandards (SOPs). Fokus auf Kommunikation, Krisenmanagement und exzellente Betreuung im Cockpit.</p>
+                <span class="date">SEPTEMBER 2025 — HEUTE</span>
+                <h3>Fluglehrer (Flight Instructor)</h3>
+                <h4>Canavia Aviation Academy</h4>
+                <p>Verantwortlich für die theoretische und praktische Ausbildung von Flugschülern unter Einhaltung strengster Sicherheitsstandards.</p>
+                <ul class="description-list">
+                    <li>Überwachung und Einhaltung der Standard Operating Procedures (SOPs).</li>
+                    <li>Krisenmanagement und Entscheidungsfindung in dynamischen Situationen.</li>
+                    <li>Effektive Kommunikation in einem internationalen und multikulturellen Umfeld.</li>
+                    <li>Förderung einer positiven Lernatmosphäre und exzellente Betreuung im Cockpit.</li>
+                </ul>
             </div>
         </div>
     </section>
 
     <section>
-        <div class="section-title">Expertise</div>
+        <div class="section-title">Ausbildung</div>
         <div class="content">
-            <p><b>Englisch:</b> Advanced (C1)/ICAO Level 6</p>
-            <p><b>Deutsch:</b> B1 (Kommunikativ)</p>
-            <p><b>Spanisch:</b> Muttersprache</p>
-            <p style="margin-top: 20px;"><b>Skills:</b> Safety First, Crew Coordination, Public Speaking.</p>
+            <div class="item">
+                <span class="date">ABSCHLUSS 2025</span>
+                <h3>Fluglehrer-Zertifizierung (FI)</h3>
+                <p style="color: var(--light);">Canavia Aviation Academy</p>
+            </div>
+            <div class="item">
+                <span class="date">ABSCHLUSS</span>
+                <h3>Bachillerato / Hochschulreife</h3>
+                <p style="color: var(--light);">Luther King Schule</p>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="section-title">Kompetenzen</div>
+        <div class="content">
+            <div style="margin-bottom: 30px;">
+                <p><b>Englisch:</b> Advanced (C1) / ICAO Level 6</p>
+                <p><b>Deutsch:</b> B1 (Kommunikativ / Laufende Verbesserung)</p>
+                <p><b>Spanisch:</b> Muttersprache</p>
+            </div>
+            <p><b>Soft Skills:</b></p>
+            <ul class="description-list">
+                <li>Ausgeprägte Teamfähigkeit und Crew Coordination (CRM).</li>
+                <li>Hohe Belastbarkeit und Stressresistenz.</li>
+                <li>Exzellente Umgangsformen und Serviceorientierung.</li>
+                <li>Pünktlichkeit, Disziplin und Zuverlässigkeit.</li>
+            </ul>
         </div>
     </section>
 
 </div>
 
 <footer>
-    <p class="subtitle" style="margin-bottom: 20px;">Ready for takeoff?</p>
-    <a href="mailto:abahls@lutherking.edu.es" class="contact-link">Contact me.</a>
+    <p class="subtitle" style="margin-bottom: 20px;">Bereit für Take-off?</p>
+    <a href="mailto:abahls@lutherking.edu.es" class="contact-link">Kontakt aufnehmen.</a>
     <p style="margin-top: 60px; color: var(--light); font-size: 0.8rem;">
-        ID 3826 — Eurowings Application<br>
+        Bewerbung ID 3826 — Eurowings Candidate<br>
         Tel: +34 681 05 56 15
     </p>
 </footer>
